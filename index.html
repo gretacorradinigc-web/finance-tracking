@@ -25,10 +25,10 @@
   --safe-top:env(safe-area-inset-top,44px);
   --safe-bottom:env(safe-area-inset-bottom,34px);
 }
-html{height:100%;background:var(--white);}body{height:100%;overflow:hidden;font-family:'Inter',sans-serif;background:var(--bg);color:var(--t1);}
+html{height:100%;background:var(--ink);}body{height:100%;overflow:hidden;font-family:'Inter',sans-serif;background:var(--bg);color:var(--t1);}
 
 /* ── LOCK SCREEN ── */
-#lock-screen{position:fixed;inset:0;background:var(--ink);display:flex;flex-direction:column;align-items:center;justify-content:center;z-index:1000;gap:0;}
+#lock-screen{position:fixed;inset:0;background:var(--ink);padding-bottom:env(safe-area-inset-bottom,34px);display:flex;flex-direction:column;align-items:center;justify-content:center;z-index:1000;gap:0;}
 .lock-logo{font-size:52px;margin-bottom:12px;}
 .lock-title{font-size:26px;font-weight:700;color:#fff;letter-spacing:-0.5px;}
 .lock-subtitle{font-size:14px;color:rgba(255,255,255,0.5);margin-top:6px;margin-bottom:40px;}
