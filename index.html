@@ -22,7 +22,7 @@
   --t1:#1A1A2E;--t2:#6B7280;--t3:#9CA3AF;
   --border:#E5E7EB;
   --r-sm:10px;--r-md:16px;--r-lg:24px;--r-pill:99px;
-  --safe-top:env(safe-area-inset-top,0px);
+  --safe-top:env(safe-area-inset-top,44px);
   --safe-bottom:env(safe-area-inset-bottom,0px);
 }
 html,body{height:100%;overflow:hidden;font-family:'Inter',sans-serif;background:var(--bg);color:var(--t1);}
@@ -47,7 +47,7 @@ html,body{height:100%;overflow:hidden;font-family:'Inter',sans-serif;background:
 #app.visible{display:flex;}
 
 /* ── SCREENS ── */
-.screen{display:none;flex:1;overflow-y:auto;overflow-x:hidden;-webkit-overflow-scrolling:touch;padding-bottom:calc(80px + var(--safe-bottom));}
+.screen{display:none;flex:1;overflow-y:auto;overflow-x:hidden;-webkit-overflow-scrolling:touch;padding-bottom:calc(80px + var(--safe-bottom));padding-top:0;}.screen-top-pad{height:calc(var(--safe-top) + 8px);}
 .screen.active{display:block;}
 .screen-scroll{padding:0 16px 20px;}
 
@@ -292,7 +292,7 @@ svg.donut{overflow:visible;}
 
   <!-- MOVIMENTI -->
   <div class="screen" id="screen-movimenti">
-    <div class="month-nav">
+    <div class="screen-top-pad"></div><div class="month-nav">
       <button onclick="changeMonth(-1)">‹</button>
       <span id="mov-month-label"></span>
       <button onclick="changeMonth(1)">›</button>
@@ -303,12 +303,12 @@ svg.donut{overflow:visible;}
 
   <!-- ANALISI -->
   <div class="screen" id="screen-analisi">
-    <div class="screen-scroll" id="analysis-content"></div>
+    <div class="screen-top-pad"></div><div class="screen-scroll" id="analysis-content"></div>
   </div>
 
   <!-- IMPOSTAZIONI -->
   <div class="screen" id="screen-settings">
-    <div class="screen-scroll" id="settings-content"></div>
+    <div class="screen-top-pad"></div><div class="screen-scroll" id="settings-content"></div>
   </div>
 
   <!-- TAB BAR -->
